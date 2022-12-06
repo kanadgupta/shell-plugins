@@ -62,6 +62,7 @@ type ImportCredentialRequest struct {
 type ProvisionCredentialRequest struct {
 	ProvisionerID
 	sdk.ProvisionInput
+	CommandLine []string
 }
 
 // DeprovisionCredentialRequest augments sdk.DeprovisionInput with a CredentialID so Deprovision() can be called over RPC.

@@ -142,7 +142,7 @@ func (t *RPCServer) CredentialProvisionerProvision(req proto.ProvisionCredential
 	}
 	*resp = sdk.ProvisionOutput{
 		Environment: make(map[string]string),
-		CommandLine: nil,
+		CommandLine: req.CommandLine,
 		Files:       make(map[string]sdk.OutputFile),
 		Diagnostics: sdk.Diagnostics{},
 	}
